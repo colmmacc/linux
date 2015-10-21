@@ -491,6 +491,10 @@ static int dup_mmap(struct mm_struct *mm, struct mm_struct *oldmm)
 		pprev = &tmp->vm_next;
 		tmp->vm_prev = prev;
 		prev = tmp;
+		if (mpnt->vm_flags & VM_WIPE_ON_FORK) {
+			/* TODO: we want to somehow use the zero page here.
+			 */
+		}
 
 		__vma_link_rb(mm, tmp, rb_link, rb_parent);
 		rb_link = &tmp->vm_rb.rb_right;

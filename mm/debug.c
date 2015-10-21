@@ -131,6 +131,7 @@ static const struct trace_print_flags vmaflags_names[] = {
 	{VM_RAND_READ,			"randread"	},
 	{VM_DONTCOPY,			"dontcopy"	},
 	{VM_DONTEXPAND,			"dontexpand"	},
+	{VM_WIPE_ON_FORK,		"wipeonfork"	},
 	{VM_ACCOUNT,			"account"	},
 	{VM_NORESERVE,			"noreserve"	},
 	{VM_HUGETLB,			"hugetlb"	},

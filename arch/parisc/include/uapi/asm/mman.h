@@ -45,6 +45,8 @@
 #define MADV_REMOVE	9		/* remove these pages & resources */
 #define MADV_DONTFORK	10		/* don't inherit across fork */
 #define MADV_DOFORK	11		/* do inherit across fork */
+#define MADV_WIPE_ON_FORK 102  /* Zero memory after a fork, for the child only */
+#define MADV_KEEP_ON_FORK 103  /* Undo MADV_WIPE_ON_FORK */
 
 /* The range 12-64 is reserved for page size specification. */
 #define MADV_4K_PAGES   12              /* Use 4K pages  */

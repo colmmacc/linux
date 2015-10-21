@@ -41,6 +41,8 @@
 #define MADV_DOFORK	11		/* do inherit across fork */
 #define MADV_HWPOISON	100		/* poison a page for testing */
 #define MADV_SOFT_OFFLINE 101		/* soft offline page for testing */
+#define MADV_WIPE_ON_FORK 102  /* Zero memory after a fork, for the child only */
+#define MADV_KEEP_ON_FORK 103  /* Undo MADV_WIPE_ON_FORK */
 
 #define MADV_MERGEABLE   12		/* KSM may merge identical pages */
 #define MADV_UNMERGEABLE 13		/* KSM may not merge identical pages */

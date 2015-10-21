@@ -72,6 +72,12 @@ static long madvise_behavior(struct vm_area_struct *vma,
 		}
 		new_flags &= ~VM_DONTCOPY;
 		break;
+	case MADV_WIPE_ON_FORK:
+		new_flags |= VM_WIPE_ON_FORK;
+		break;
+	case MADV_KEEP_ON_FORK:
+		new_flags &= ~VM_WIPE_ON_FORK;
+		break;
 	case MADV_DONTDUMP:
 		new_flags |= VM_DONTDUMP;
 		break;
